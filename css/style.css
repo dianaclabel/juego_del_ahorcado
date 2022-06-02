@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 90%;
+  background-image: url("https://64.media.tumblr.com/a61340ac231fa800ab32f1a764fb762e/tumblr_mryhc6xjI31r8ptfdo1_r2_500.gifv");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
