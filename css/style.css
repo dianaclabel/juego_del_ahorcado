@@ -17,6 +17,11 @@ html {
 
 .container__header {
   height: 100px;
+  margin-left: 5%;
+}
+
+.logotipo {
+  padding: 20px 0;
 }
 
 .main {
@@ -43,12 +48,12 @@ html {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 70%;
+  height: 65%;
 }
 
 .button {
-  width: 200px;
-  height: 60px;
+  width: 250px;
+  height: 70px;
   border: 1px solid #440093;
   border-radius: 20px;
   color: white;
@@ -57,15 +62,26 @@ html {
   font-size: 16px;
   font-weight: 900;
 }
-
-.footer div {
-  margin-top: 20px;
-  height: 50px;
+.footer {
+  background-color: #440093;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  height: 70px;
   width: 100%;
+  padding: 0 20px;
+}
+.footer .footer-container {
+  height: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .footer__items {
   display: flex;
   justify-content: space-between;
   list-style: none;
+}
+.footer__items li {
+  margin-left: 15px;
 }
