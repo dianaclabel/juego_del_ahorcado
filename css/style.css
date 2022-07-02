@@ -62,6 +62,11 @@ html {
   font-size: 16px;
   font-weight: 900;
 }
+/*style main*/
+.hanged__image {
+  display: flex;
+  justify-content: center;
+}
 .footer {
   background-color: #440093;
   color: white;
