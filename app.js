@@ -28,3 +28,9 @@ pincel.beginPath();
 pincel.moveTo(650, 100);
 pincel.lineTo(650, 160);
 pincel.stroke();
+
+//cabeza
+pincel.beginPath();
+
+pincel.arc(650, 200, 40, 0, Math.PI * 2);
+pincel.stroke();
