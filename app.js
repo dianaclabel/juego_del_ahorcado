@@ -31,6 +31,28 @@ pincel.stroke();
 
 //cabeza
 pincel.beginPath();
-
 pincel.arc(650, 200, 40, 0, Math.PI * 2);
+pincel.fillStyle = "black";
+pincel.stroke();
+
+//cuerpo
+pincel.beginPath();
+pincel.moveTo(650, 240);
+pincel.lineTo(650, 400);
+pincel.stroke();
+
+//manos
+pincel.beginPath();
+pincel.moveTo(650, 260);
+pincel.lineTo(630, 350);
+pincel.moveTo(650, 260);
+pincel.lineTo(680, 350);
+pincel.stroke();
+
+//piernas
+pincel.beginPath();
+pincel.moveTo(650, 400);
+pincel.lineTo(630, 490);
+pincel.moveTo(650, 400);
+pincel.lineTo(680, 490);
 pincel.stroke();
