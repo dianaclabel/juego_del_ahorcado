@@ -63,6 +63,14 @@ html {
   font-weight: 900;
 }
 /*style main*/
+.hanged__word {
+  display: flex;
+}
+.script__word {
+  width: 25px;
+  border-bottom: 3px solid black;
+  margin-right: 15px;
+}
 .hanged__image {
   display: flex;
   justify-content: center;
