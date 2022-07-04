@@ -6,7 +6,7 @@ pincel.fillStyle = "gray";
 pincel.fillRect(0, 0, 1200, 600);
 
 //piso de la horca
-pincel.beginPath();
+/*pincel.beginPath();
 pincel.moveTo(400, 550);
 pincel.lineTo(700, 550);
 pincel.stroke();
@@ -32,7 +32,6 @@ pincel.stroke();
 //cabeza
 pincel.beginPath();
 pincel.arc(650, 200, 40, 0, Math.PI * 2);
-pincel.fillStyle = "black";
 pincel.stroke();
 
 //cuerpo
@@ -56,3 +55,47 @@ pincel.lineTo(630, 490);
 pincel.moveTo(650, 400);
 pincel.lineTo(680, 490);
 pincel.stroke();
+
+*/
+
+const dibujarHorca = function (x, y, a, b) {
+  pincel.beginPath();
+  pincel.moveTo(100 * x, 100 * y);
+  pincel.lineTo(100 * a, 100 * b);
+  pincel.stroke();
+};
+
+const dibujarcabezaHorca = function (x, y) {
+  pincel.beginPath();
+  pincel.arc(100 * x, 100 * y, 40, 0, Math.PI * 2);
+  pincel.stroke();
+};
+
+dibujarHorca(4, 5.5, 7, 5.5, 0, 0);
+dibujarHorca(5, 1, 5, 5.5);
+dibujarHorca(5, 1, 6.5, 1);
+dibujarHorca(6.5, 1, 6.5, 1.6);
+dibujarHorca(6.5, 2);
+dibujarHorca(6.5, 2.4, 6.5, 4);
+dibujarcabezaHorca(6.5, 2);
+dibujarHorca(6.5, 2.6, 6.3, 3.5);
+dibujarHorca(6.5, 2.6, 6.8, 3.5);
+dibujarHorca(6.5, 4, 6.3, 4.9);
+dibujarHorca(6.5, 4, 6.8, 4.9);
+//------------ palabra aleatoria-----
+let words = [
+  "respeto",
+  "solidaridad",
+  "empatia",
+  "puntualidad",
+  "responsabilidad",
+];
+
+function escogerPalabra() {
+  let sorteo = Math.random() * (words.length - 1);
+  let index = Math.round(sorteo);
+  let word = words[index];
+  console.log(word);
+}
+
+escogerPalabra();
