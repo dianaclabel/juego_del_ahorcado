@@ -86,6 +86,9 @@ dibujarHorca(6.5, 4, 6.8, 4.9);
 */
 //------------ palabra aleatoria-----
 let scripts = document.querySelector(".hanged__word");
+let button = document.querySelector(".button--start");
+
+button.addEventListener("click", escogerPalabra);
 
 let words = [
   "respeto",
@@ -94,12 +97,12 @@ let words = [
   "puntualidad",
   "responsabilidad",
 ];
-let sorteo = Math.random() * (words.length - 1);
-let index = Math.round(sorteo);
-let word = words[index];
 
 function escogerPalabra() {
-  console.log(word);
+  let sorteo = Math.random() * (words.length - 1);
+  let index = Math.round(sorteo);
+  let word = words[index];
+
   for (let i = 0; i < word.length; i++) {
     let div = document.createElement("div");
     div.textContent = word[i];
@@ -107,5 +110,3 @@ function escogerPalabra() {
     scripts.appendChild(div);
   }
 }
-
-escogerPalabra();
