@@ -68,6 +68,7 @@ html {
 }
 .script__word {
   width: 25px;
+  height: 25px;
   border-bottom: 3px solid black;
   margin-right: 15px;
 }
