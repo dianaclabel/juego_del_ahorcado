@@ -88,7 +88,10 @@ dibujarHorca(6.5, 4, 6.8, 4.9);
 let scripts = document.querySelector(".hanged__word");
 let button = document.querySelector(".button--start");
 
-button.addEventListener("click", escogerPalabra);
+button.addEventListener("click", function () {
+  borrar();
+  escogerPalabra();
+});
 
 let words = [
   "respeto",
@@ -98,15 +101,25 @@ let words = [
   "responsabilidad",
 ];
 
+let word;
+
 function escogerPalabra() {
+  borrar();
   let sorteo = Math.random() * (words.length - 1);
   let index = Math.round(sorteo);
-  let word = words[index];
+  word = words[index];
+  dibujarLineas();
+}
 
+function dibujarLineas() {
   for (let i = 0; i < word.length; i++) {
     let div = document.createElement("div");
     div.textContent = word[i];
     div.className = "script__word";
     scripts.appendChild(div);
   }
+}
+
+function borrar() {
+  document.getElementsByClassName(".script__word").remove();
 }
