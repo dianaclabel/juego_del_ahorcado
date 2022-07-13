@@ -9,6 +9,8 @@ let palabras = [
   "responsabilidad",
 ];
 
+let palabraSecreta;
+
 function escogerPalabra() {
   let sorteo = Math.random() * (palabras.length - 1);
   let index = Math.round(sorteo);
@@ -21,7 +23,7 @@ function dibujarLineas() {
   canvas.linetWidth = 5;
   canvas.lineCap = "round";
   canvas.lineJoin = "round";
-  canvas.strokeStyle = "#440093";
+  canvas.strokeStyle = "black";
   canvas.beginPath();
 
   let ancho = 600 / palabraSecreta.length;
