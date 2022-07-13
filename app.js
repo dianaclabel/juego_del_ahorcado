@@ -89,8 +89,7 @@ let scripts = document.querySelector(".hanged__word");
 let button = document.querySelector(".button--start");
 
 button.addEventListener("click", function () {
-  borrar();
-  escogerPalabra();
+  dibujarLineas();
 });
 
 let words = [
@@ -104,14 +103,14 @@ let words = [
 let word;
 
 function escogerPalabra() {
-  borrar();
   let sorteo = Math.random() * (words.length - 1);
   let index = Math.round(sorteo);
   word = words[index];
-  dibujarLineas();
+  return word;
 }
 
 function dibujarLineas() {
+  escogerPalabra();
   for (let i = 0; i < word.length; i++) {
     let div = document.createElement("div");
     div.textContent = word[i];
@@ -120,6 +119,7 @@ function dibujarLineas() {
   }
 }
 
+borrar();
 function borrar() {
-  document.getElementsByClassName(".script__word").remove();
+  scripts.remove(".script__word");
 }
