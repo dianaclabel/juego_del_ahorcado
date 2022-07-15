@@ -6,12 +6,13 @@ let palabras = [
   "responsabilidad",
 ];
 
+let palabraSecreta;
 let letras = [];
 let palabrasCorrectas = "";
 let errores = 9;
 let tablero = document.querySelector("canvas").getContext("2d");
 tablero.fillStyle = "gray";
-tablero.fillRect(0, 0, 1200, 800);
+tablero.fillRect(0, 0, 1200, 700);
 
 function escogerPalabra() {
   let palabra = palabras[Math.floor(Math.random() * palabras.length)];
@@ -40,3 +41,23 @@ function dibujarLineas() {
 }
 
 dibujarLineas(escogerPalabra());
+
+function escribirLetraCorrecta(index) {
+  tablero.font = "bold 52px roboto";
+  tablero.lineWidth = 6;
+  tablero.lineCap = "round";
+  tablero.lineJoin = "round";
+  tablero.fillStyle = "#440093";
+  let ancho = 850 / palabraSecreta.length;
+  tablero.fillText(palabraSecreta[index], 200 + ancho * index, 500);
+}
+
+function escribirLetraInorrecta(letra, erroresleft) {
+  tablero.font = "bold 40px roboto";
+  tablero.lineWidth = 6;
+  tablero.lineCap = "round";
+  tablero.lineJoin = "round";
+  tablero.fillStyle = "#440093";
+
+  tablero.fill;
+}
