@@ -1,6 +1,3 @@
-var canvas = document.querySelector("canvas");
-var pincel = canvas.getContext("2d");
-
 let palabras = [
   "respeto",
   "solidaridad",
@@ -9,32 +6,37 @@ let palabras = [
   "responsabilidad",
 ];
 
-let palabraSecreta;
+let letras = [];
+let palabrasCorrectas = "";
+let errores = 9;
+let tablero = document.querySelector("canvas").getContext("2d");
+tablero.fillStyle = "gray";
+tablero.fillRect(0, 0, 1200, 800);
 
 function escogerPalabra() {
-  let sorteo = Math.random() * (palabras.length - 1);
-  let index = Math.round(sorteo);
-  palabraSecreta = palabras[index];
+  let palabra = palabras[Math.floor(Math.random() * palabras.length)];
+  palabraSecreta = palabra;
   console.log(palabraSecreta);
   return palabraSecreta;
 }
 
 function dibujarLineas() {
-  canvas.linetWidth = 5;
-  canvas.lineCap = "round";
-  canvas.lineJoin = "round";
-  canvas.strokeStyle = "black";
-  canvas.beginPath();
+  tablero.linetWidth = 6;
+  tablero.lineCap = "round";
+  tablero.lineJoin = "round";
+  tablero.strokeStyle = "#440093";
+  tablero.beginPath();
 
-  let ancho = 600 / palabraSecreta.length;
+  let ancho = 850 / palabraSecreta.length;
+  console.log(ancho);
 
   for (let i = 0; i < palabraSecreta.length; i++) {
-    canvas.moveTo(500 + ancho * i, 640);
-    canvas.lineTo(550 + ancho * i, 640);
+    tablero.moveTo(200 + ancho * i, 500);
+    tablero.lineTo(250 + ancho * i, 500);
   }
 
-  canvas.stroke();
-  canvas.closePath();
+  tablero.stroke();
+  tablero.closePath();
 }
 
 dibujarLineas(escogerPalabra());
