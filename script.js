@@ -1,9 +1,10 @@
+// Deben estar en mayúsculas
 let palabras = [
-  "respeto",
-  "solidaridad",
-  "empatia",
-  "puntualidad",
-  "responsabilidad",
+  "RESPETO",
+  "SOLIDARIDAD",
+  "EMPATIA",
+  "PUNTUALIDAD",
+  "RESPONSABILIDAD",
 ];
 
 let palabraSecreta;
@@ -59,5 +60,44 @@ function escribirLetraInorrecta(letra, erroresleft) {
   tablero.lineJoin = "round";
   tablero.fillStyle = "#440093";
 
-  tablero.fill;
+  tablero.fillText(letra, 535 + 40 * (10 - erroresleft), 710, 40);
 }
+
+function verificarLetraClicada(key) {
+  if (letras.length < 1 || letras.indexOf(key) < 0) {
+    letras.push(key);
+    return false;
+  } else {
+    letras.push(key);
+    return true;
+  }
+}
+
+function adicionarLetraCorrecta(i) {
+  palabrasCorrectas += palabraSecreta[i].toUpperCase();
+}
+
+function adicionarLetraIncorrecta(letter) {
+  if (palabraSecreta.indexOf(letter) <= 0) {
+    errores -= 1;
+  }
+}
+
+document.onkeydown = (e) => {
+  let letra = e.key.toUpperCase();
+  if (!verificarLetraClicada(e.key)) {
+    if (palabraSecreta.includes(letra)) {
+      console.log(letra);
+      adicionarLetraCorrecta(palabraSecreta.indexOf(letra));
+      for (let i = 0; i < palabraSecreta.length; i++) {
+        if (palabraSecreta[i] === letra) {
+          escribirLetraCorrecta(i);
+        }
+      }
+    } else {
+      if (!verificarLetraClicada(e.key)) return;
+      adicionarLetraIncorrecta(letra);
+      escribirLetraInorrecta(letra, errores);
+    }
+  }
+};
