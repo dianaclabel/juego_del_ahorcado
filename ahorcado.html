@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado v1</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <h1>Ahorcado</h1>
+        <p>¡Adivina la palabra presionando las teclas!</p>
+        <div class="hanged__image">
+          <canvas width="300" height="200"></canvas>
+        </div>
+        <div id="correctas"></div>
+        <div id="incorrectas"></div>
+        <div id="resultado-gana" class="oculto">
+            <strong>¡Ganaste!</strong>
+            <div>
+              <button  class = "boton" onclick="reinicio()">Nuevo juego</button>
+            </div>
+            
+        </div>
+        <div id="resultado-pierde" class="oculto">
+            <strong>¡Perdiste!</strong>
+            <div>
+              <button class="boton" onclick="reinicio()">Nuevo juego </button>
+
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
