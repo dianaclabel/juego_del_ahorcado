@@ -9,20 +9,44 @@ html, button {
 }
 
 body{
-  
-  background-color: #f7faff;
-background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23acd9ff' fill-opacity='0.46' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-image: url(../assets/fondo-3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo-principal{
+  font-size: 34px;
+  margin-top: 100px;
+  color: #440093;
+  font-family: "Concert One", cursive;
+  letter-spacing: 1px;
+}
+
+.main p{
+  margin-top: 50px;
+  font-weight: 700;
+  color:  #440093;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+.container__header {
+  height: 100px;
+  margin-left: 5%;
+}
+
+.logotipo {
+  padding: 20px 0;
 }
 
 .oculto {
   display: none;
 }
- h1{
-  margin-top: 40px;
-  font-size: 30px;
-  font-family: 'Nunito Sans', sans-serif;
-  color: darkcyan;
- }
+ 
 
  
 .container{
@@ -32,39 +56,83 @@ background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox=
 }
 
 
+.main {
+  width: 600px;
+  height: 750px;
+  margin: 0 auto;
+  text-align: center;
+  border: 4px solid #8b50cf;
+  background-color: white;
+  opacity: 0.9;
+  border-radius: 40px;
+}
 
+.hanged__image{
+  margin-top: 50px;
+}
 #correctas{
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 700;
+  color: #45484a;
 }
 
 #incorrectas{
+  margin-top: 15px;
   margin-bottom: 20px;
   font-weight: 700;
-  color: red;
+  color: #D500F9;
 }
 
 .boton{
   margin-top: 15px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: 0;
-  background-color: cadetblue;
+  padding: 10px;
+  border-radius: 20px;
   color: white;
   cursor: pointer;
-
+  width: 200px;
+  height: 60px;
+  border: 1px solid #440093;
+  background-color: #440093;
+  font-size: 16px;
+  font-weight: 900;
 }
 
 .boton:hover {
-  background-color: darkcyan;
+  border-color: #8b50cf;
+  background-color: #8b50cf;
 }
 
 #resultado-gana {
+  margin-top: 35px;
   color: green;
-  font-size: 20px;
+  font-size: 26px;
 }
 
 #resultado-pierde {
+  margin-top: 35px;
   color: red;
-  font-size: 20px;
+  font-size: 26px;
+}
+
+.footer {
+  background-color: #440093;
+  color: white;
+  height: 70px;
+  width: 100%;
+  padding: 0 20px;
+  margin-top: auto;
+}
+.footer .footer-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__items {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.footer__items li {
+  margin-left: 15px;
 }
