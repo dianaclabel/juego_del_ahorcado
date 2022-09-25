@@ -72,6 +72,12 @@ html {
   color: white;
   text-decoration: none;
 }
+
+.button:hover {
+  border-color: #8b50cf;
+  background-color: #8b50cf;
+} 
+
 /*style main*/
 .hanged__word {
   display: flex;
@@ -86,6 +92,10 @@ html {
   display: flex;
   justify-content: center;
 }
+/*stilos de words*/
+
+
+
 .footer {
   background-color: #440093;
   color: white;

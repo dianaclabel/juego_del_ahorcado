@@ -1,6 +1,13 @@
 // Lógica principal del ahorcado
 
-const PALABRAS = ["cocina", "baño", "aguacate", "manzana"];
+const storedWords = JSON.parse(localStorage.getItem("palabrasGuardadas")) || [];
+const PALABRAS = [
+  "alura",
+  "oracle",
+  "educacion",
+  "programacion",
+  ...storedWords,
+];
 const MAX_INCORRECTOS = 9;
 
 let estado = ""; // "jugando" | "gana" | "pierde"
